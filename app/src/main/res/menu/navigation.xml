@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_news"
+        android:icon="@drawable/ic_newspaper_24dp"
+        android:title="@string/title_news" />
+
+    <item
+        android:id="@+id/nav_books"
+        android:icon="@drawable/ic_book_open_24dp"
+        android:title="@string/title_books" />
+
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_about" />
+
+</menu>

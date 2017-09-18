@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">NYTClient</string>
+    <string name="title_activity_main1">MainActivity1</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_news">News</string>
+    <string name="title_books">Books</string>
+    <string name="title_about">About</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="fail_news_load">Couldn\'t load news. Hmm...</string>
+    <string name="yet_to_implement">Yet to implement!</string>
+</resources>

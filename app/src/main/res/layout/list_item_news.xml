@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="newsItem"
+            type="com.nytclient.data.model.NewsItem" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/newsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:minHeight="88dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/txtTitle"
+                    style="@style/Base.TextAppearance.AppCompat.Body1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="42dp"
+                    app:text="@{newsItem.title}"
+                    tools:text="An Extreme Title Everyone Sees" />
+
+                <TextView
+                    android:id="@+id/txtDescription"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/txtTitle"
+                    android:layout_below="@+id/txtTitle"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    app:text="@{newsItem.description}"
+                    tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    style="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/txtTitle"
+                    android:layout_below="@+id/txtDescription"
+                    android:layout_marginTop="4dp"
+                    app:date="@{newsItem.updatedDate}"
+                    tools:text="5 hours ago" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <ImageView
+            android:id="@+id/imgThumbnail"
+            imageUrl="@{newsItem.thumbnailUrl}"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/colorPrimary"
+            android:elevation="6dp"
+            tools:src="@mipmap/ic_launcher" />
+
+    </RelativeLayout>
+</layout>
