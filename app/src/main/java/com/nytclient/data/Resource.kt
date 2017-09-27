@@ -25,6 +25,9 @@ class Resource<out T>(val status: Status, @Nullable val data: T, @Nullable val m
     }
 }
 
+/**
+ * Status for data.
+ */
 enum class Status {
     SUCCESS,
     ERROR,

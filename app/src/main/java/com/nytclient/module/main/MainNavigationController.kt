@@ -9,7 +9,7 @@ import org.jetbrains.anko.toast
  *
  * Created by Dogan Gulcan on 9/17/17.
  */
-class MainNavigationController constructor(val activity: MainActivity) {
+class MainNavigationController constructor(private val activity: MainActivity) {
 
     private val fragmentManager = activity.supportFragmentManager
     private val containerId = R.id.fragmentContainer

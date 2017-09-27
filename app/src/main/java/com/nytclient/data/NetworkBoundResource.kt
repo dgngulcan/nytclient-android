@@ -27,7 +27,7 @@ abstract class NetworkBoundResource<ResultType, RequestType>(val context: Contex
 
         result.addSource(dbSource, { data ->
             result.removeSource(dbSource)
-            if (shouldFetch(data!!)) {
+            if (shouldFetch(data)) {
                 fetchFromNetwork(dbSource)
             } else {
                 result.addSource(dbSource, { newData -> result.setValue(Resource.success(newData)) })
@@ -83,7 +83,7 @@ abstract class NetworkBoundResource<ResultType, RequestType>(val context: Contex
     protected abstract fun saveCallResult(item: RequestType)
 
     @MainThread
-    protected abstract fun shouldFetch(@Nullable data: ResultType): Boolean
+    protected abstract fun shouldFetch(@Nullable data: ResultType?): Boolean
 
     @MainThread
     protected abstract fun loadFromDb(): LiveData<ResultType>

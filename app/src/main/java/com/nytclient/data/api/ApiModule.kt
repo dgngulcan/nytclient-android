@@ -17,6 +17,7 @@ import javax.inject.Singleton
 
 /**
  * Provider module for APIs.
+ *
  * Created by Dogan Gulcan on 9/15/17.
  */
 @Module

@@ -40,7 +40,7 @@ class NewsRepo @Inject constructor(val appContext: NytClientApp,
                 newsDao.insertNews(item.results)
             }
 
-            override fun shouldFetch(data: List<NewsItem>): Boolean {
+            override fun shouldFetch(data: List<NewsItem>?): Boolean {
                 val latestNewsCreationDate = if (data.isNotEmpty()) {
                     data.first().createdDate
                 } else {

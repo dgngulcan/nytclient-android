@@ -26,9 +26,9 @@ class NytClientApp : Application(), HasActivityInjector {
     private fun initDagger() {
         DaggerAppComponent
                 .builder()
-                .application(this@NytClientApp)
+                .application(this)
                 .build()
-                .inject(this@NytClientApp)
+                .inject(this)
 
     }
 

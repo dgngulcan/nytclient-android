@@ -12,9 +12,7 @@ import dagger.Module
  *
  * Created by Dogan Gulcan on 9/15/17.
  */
-
-@Module
-(includes = arrayOf(
+@Module(includes = arrayOf(
         UtilsModule::class,
         DataBaseModule::class,
         ApiModule::class)
