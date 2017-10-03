@@ -1,6 +1,6 @@
 # nytclient-android
 
-This sample app created to demonstrate the usage of [Android Architecture Components](https://developer.android.com/topic/libraries/architecture/guide.html) with [Dagger2](https://google.github.io/dagger/) 
+This sample app is created to demonstrate the usage of [Android Architecture Components](https://developer.android.com/topic/libraries/architecture/guide.html) with [Dagger2](https://google.github.io/dagger/) 
 
 News feed is obtained from [New York Times API](https://developer.nytimes.com/).
 
