@@ -1,8 +1,8 @@
 # nytclient-android
 
-A basic app that uses [New York Times API](https://developer.nytimes.com/) to list news.
+This sample app created to demonstrate the usage of [Android Architecture Components](https://developer.android.com/topic/libraries/architecture/guide.html) with [Dagger2](https://google.github.io/dagger/) 
 
-**NOTE**: Work in progress.
+News feed is obtained from [New York Times API](https://developer.nytimes.com/).
 
 ### Libraries
 * [Android Architecture Components](https://developer.android.com/topic/libraries/architecture/guide.html)
