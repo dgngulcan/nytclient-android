@@ -10,3 +10,6 @@ News feed is obtained from [New York Times API](https://developer.nytimes.com/).
 * [Retrofit2](http://square.github.io/retrofit/) - for REST api
 * [Dagger2](https://google.github.io/dagger/) - for dependency injection
 * [Glide](https://github.com/bumptech/glide) - for image loading
+
+### References
+https://github.com/googlesamples/android-architecture-components
