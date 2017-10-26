@@ -1,4 +1,5 @@
 # nytclient-android
+<img align="right" src="/screenshots/nyt_ss.png" height="420"/>
 
 This sample app is created to demonstrate the usage of [Android Architecture Components](https://developer.android.com/topic/libraries/architecture/guide.html) with [Dagger2](https://google.github.io/dagger/) 
 
