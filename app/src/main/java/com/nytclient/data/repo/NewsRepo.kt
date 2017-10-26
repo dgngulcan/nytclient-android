@@ -41,20 +41,20 @@ class NewsRepo @Inject constructor(val appContext: NytClientApp,
             }
 
             override fun shouldFetch(data: List<NewsItem>?): Boolean {
-                val latestNewsCreationDate = if (data.isNotEmpty()) {
-                    data?.first()?.createdDate
-                } else {
-                    ""
+                if (data == null || data.isEmpty()) {
+                    return true
                 }
+
+                val latestNewsCreationDate = data.first().createdDate
+
                 return if (latestNewsCreationDate.isNotBlank()) {
                     latestNewsCreationDate.let {
-                        DateTimeUtils.getInstance().getTimeStampFromDate(it)?.
-                                let {
-                                    val currentMillis = System.currentTimeMillis()
-                                    val timeDifference = currentMillis - it
-                                    TimeUnit.MILLISECONDS.toMinutes(timeDifference) > 2
-                                            || timeDifference < 0
-                                }
+                        DateTimeUtils.getInstance().getTimeStampFromDate(it)?.let {
+                            val currentMillis = System.currentTimeMillis()
+                            val timeDifference = currentMillis - it
+                            TimeUnit.MILLISECONDS.toMinutes(timeDifference) > 2
+                                    || timeDifference < 0
+                        }
                     } ?: true
                 } else {
                     true
@@ -69,7 +69,6 @@ class NewsRepo @Inject constructor(val appContext: NytClientApp,
             override fun processResponse(response: ApiResponse<NewsApiResponse>): NewsApiResponse? {
                 return response.body
             }
-
 
         }.asLiveData()
     }
